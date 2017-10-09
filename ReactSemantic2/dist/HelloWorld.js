@@ -11,6 +11,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
+var semantic_ui_react_1 = require("semantic-ui-react");
 // 'HelloProps' describes the shape of props.
 // State is never set so we use the '{}' type.
 var Hello = (function (_super) {
@@ -19,12 +20,14 @@ var Hello = (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Hello.prototype.render = function () {
-        return React.createElement("h1", null,
-            "Hello from ",
-            this.props.compiler,
-            " and ",
-            this.props.framework,
-            " !");
+        return React.createElement("div", null,
+            React.createElement("h1", null,
+                "Hello from ",
+                this.props.compiler,
+                " and ",
+                this.props.framework,
+                " !"),
+            React.createElement(semantic_ui_react_1.Button, null, "semantic button"));
     };
     return Hello;
 }(React.Component));
